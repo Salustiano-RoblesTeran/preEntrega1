@@ -50,7 +50,7 @@ function cacularTotal () {
         carrito.forEach((item) => {
             aux = item.precio;
             acumulador = acumulador + aux;
-            console.log(acumulador);
+            console.log(`El precio total es: ${acumulador}`);
         })
     
 }
@@ -61,5 +61,5 @@ function cacularTotal () {
 productoCarrito(1);
 productoCarrito(3);
 
-
+/*------ Calculamos el el precio total --------*/
 cacularTotal(); 
