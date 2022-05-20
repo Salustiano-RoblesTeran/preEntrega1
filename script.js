@@ -54,7 +54,6 @@ function cacularTotal () {
         })
     
 }
-cacularTotal(); // Calculamos el carrito
 
 // Programa
 
@@ -63,3 +62,4 @@ productoCarrito(1);
 productoCarrito(3);
 
 
+cacularTotal(); 
