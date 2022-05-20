@@ -25,13 +25,12 @@ function renderizarProductos() {
     });
 }
 
-renderizarProductos();
+renderizarProductos(); // Mostramos los productos
 
 // Mostramos el carrito
 function renderCarrito () {
     console.log("------Tu Carrito------");
-    const carritoSinDuplicados = [... new Set(carrito)];
-    carritoSinDuplicados.forEach((item) => {
+    carrito.forEach((item) => {
         const producto = item.producto;
         const precio = item.precio;
         console.log(`Producto agregado al carrito: ${producto} y tiene un costo: ${precio}`);
@@ -40,11 +39,27 @@ function renderCarrito () {
 }
 
 function productoCarrito(valor) {
-    // Anyadimos el Nodo a nuestro carrito
+    // agregamos el producto a nuestro carrito
     carrito.push(productos[valor]);
     // Actualizamos el carrito 
     renderCarrito();
 }
 
+function cacularTotal () {
+        let acumulador = 0, aux;
+        carrito.forEach((item) => {
+            aux = item.precio;
+            acumulador = acumulador + aux;
+            console.log(acumulador);
+        })
+    
+}
+cacularTotal(); // Calculamos el carrito
+
+// Programa
+
+/*------ Agregamos los productos al carrito--------*/
 productoCarrito(1);
 productoCarrito(3);
+
+
