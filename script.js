@@ -4,9 +4,9 @@
 // ingresar que productos quiero agregar
 
 
-let carrito = [];
+const carrito = [];
 
-let productos = [
+const productos = [
         {id: 1, producto: "Lampara", precio: 2500},
         {id: 2, producto: "Mesa", precio: 1000},
         {id: 3, producto: "Cama", precio: 15000},
