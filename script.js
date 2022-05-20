@@ -18,6 +18,7 @@ let productos = [
 // Mostramos todos los productos
 function renderizarProductos() {
     console.log("------Mira nuestro catalogo------");
+
     productos.forEach((info) => {
         const producto = info.producto;
         const precio = info.precio;
@@ -55,6 +56,11 @@ function cacularTotal () {
     
 }
 
+function buscador (palabra) {
+    const resultado = productos.filter((el) => el.producto.includes(palabra));
+    console.log(`El buscador encontro: ${resultado}`);
+}
+
 // Programa
 
 /*------ Agregamos los productos al carrito--------*/
@@ -63,3 +69,6 @@ productoCarrito(3);
 
 /*------ Calculamos el el precio total --------*/
 cacularTotal(); 
+
+/*----- USAMOS EL BUSCADOR --------*/
+buscador('Lampara');
